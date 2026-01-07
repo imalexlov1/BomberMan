@@ -21,7 +21,7 @@ ambient_light_source = 3
 environment = SubResource("Environment_1bvp3")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.9659258, 0.22414382, -0.12940949, -0.25881898, 0.8365163, -0.48296294, 2.1071852e-08, 0.5, 0.86602545, 0, 3, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1268415, 7.174896)
 
 [node name="Mur" parent="." instance=ExtResource("1_0vp4s")]
 
