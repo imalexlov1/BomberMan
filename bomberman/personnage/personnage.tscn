@@ -6,13 +6,15 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bbjgm"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Node3D" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 script = ExtResource("1_xbx0k")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0339572, 0)
 mesh = SubResource("CapsuleMesh_bbjgm")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0015456676, 1.028107, 0.005817637)
 shape = SubResource("CapsuleShape3D_bbjgm")
