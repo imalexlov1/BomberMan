@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf4gmj6713n73"]
+
+[ext_resource type="Script" uid="uid://dd4o2xu1kc3cn" path="res://bomberman/ennemi/ennemi.gd" id="1_y2f3k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4xxn"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_y2f3k"]
+material = SubResource("StandardMaterial3D_u4xxn")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yktl1"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_u4xxn"]
+radius = 0.61569065
+
+[node name="Ennemi" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_y2f3k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("SphereMesh_y2f3k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("SphereShape3D_yktl1")
+
+[node name="HitBox" type="Area3D" parent="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/HitBox"]
+shape = SubResource("SphereShape3D_u4xxn")
+
+[connection signal="body_entered" from="CharacterBody3D/HitBox" to="CharacterBody3D" method="_on_hit_box_body_entered"]
