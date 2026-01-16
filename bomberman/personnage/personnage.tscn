@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4cykaydup8so"]
+[gd_scene load_steps=5 format=3 uid="uid://c4cykaydup8so"]
 
 [ext_resource type="Script" uid="uid://c2emaqm1ppqc4" path="res://bomberman/personnage/personnage.gd" id="1_xbx0k"]
+[ext_resource type="PackedScene" uid="uid://cijpbbqj6k15g" path="res://bomberman/bombe/bombe.tscn" id="2_mg3q7"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bbjgm"]
 
@@ -10,6 +11,7 @@
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 script = ExtResource("1_xbx0k")
+bomb_scene = ExtResource("2_mg3q7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0339572, 0)
