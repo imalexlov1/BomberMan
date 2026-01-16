@@ -25,6 +25,7 @@ environment = SubResource("Environment_1bvp3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2104088, 3.2781737, 7.2948613)
 
 [node name="Mur" parent="." instance=ExtResource("1_0vp4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3007927, -9.472788)
 
 [node name="Sol" parent="." instance=ExtResource("2_45vn0")]
 

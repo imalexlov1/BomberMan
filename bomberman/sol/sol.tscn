@@ -1,17 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://2ik3lyhlk1yu"]
+[gd_scene load_steps=4 format=3 uid="uid://2ik3lyhlk1yu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjy3p"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hjy3p"]
+material = SubResource("StandardMaterial3D_hjy3p")
+size = Vector2(20, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n05ew"]
+size = Vector3(20, 0.2, 20)
 
 [node name="Sol" type="Node3D"]
 
 [node name="Sol" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sol"]
-transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("PlaneMesh_hjy3p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sol"]
-transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, 0, 0)
 shape = SubResource("BoxShape3D_n05ew")
