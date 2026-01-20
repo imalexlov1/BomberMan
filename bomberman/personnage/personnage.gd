@@ -1,3 +1,5 @@
+class_name Player
+
 extends CharacterBody3D
 
 @export var speed = 5.0
@@ -10,10 +12,12 @@ extends CharacterBody3D
 var current_lives = init_live
 
 var start_position : Vector3
+signal update_lives(new_value)
 
 func _ready ():
 	# On mémorise la position au lancement du jeu pour le respawn
 	start_position = global_position
+	update_lives.emit(current_lives)
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -46,6 +50,7 @@ func spawn_bomb():
 func take_damage():
 	current_lives -= 1
 	print("Vies : ", current_lives)
+	update_lives.emit(current_lives)
 	
 	if current_lives > 0 : 
 		respawn()

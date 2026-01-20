@@ -8,7 +8,13 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bbjgm"]
 radius = 0.4
 
+<<<<<<< HEAD
 [node name="CharacterBody3D" type="CharacterBody3D"]
+=======
+[node name="Node3D" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." groups=["joueur"]]
+>>>>>>> 9e471dc (Add label lives)
 script = ExtResource("1_xbx0k")
 bomb_scene = ExtResource("2_mg3q7")
 

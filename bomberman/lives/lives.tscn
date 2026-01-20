@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://4ob4o8ad65xf"]
+
+[node name="Lives" type="CanvasLayer"]
+
+[node name="Label_lives" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Vies : 3"

@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dk7gmuy0gc7kb"]
+[gd_scene load_steps=11 format=3 uid="uid://dk7gmuy0gc7kb"]
 
 [ext_resource type="PackedScene" uid="uid://jpd4iv02dtor" path="res://bomberman/mur/mur.tscn" id="1_0vp4s"]
 [ext_resource type="PackedScene" uid="uid://2ik3lyhlk1yu" path="res://bomberman/sol/sol.tscn" id="2_45vn0"]
 [ext_resource type="PackedScene" uid="uid://cijpbbqj6k15g" path="res://bomberman/bombe/bombe.tscn" id="3_qpluv"]
 [ext_resource type="PackedScene" uid="uid://c4cykaydup8so" path="res://bomberman/personnage/personnage.tscn" id="4_fnspe"]
 [ext_resource type="PackedScene" uid="uid://bf4gmj6713n73" path="res://bomberman/ennemi/ennemi.tscn" id="5_45vn0"]
+[ext_resource type="PackedScene" uid="uid://4ob4o8ad65xf" path="res://bomberman/lives/lives.tscn" id="6_qpluv"]
+[ext_resource type="Script" uid="uid://5ba3muog2m2c" path="res://bomberman/lives/lives.gd" id="7_fnspe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 
@@ -39,3 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30313, 0.47955978, 4.037243
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.8660253, 0.5, 0, -0.5, -0.8660253, 0, 4.7018056, 0)
+
+[node name="Lives" parent="." instance=ExtResource("6_qpluv")]
+script = ExtResource("7_fnspe")
