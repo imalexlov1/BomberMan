@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cijpbbqj6k15g"]
+[gd_scene load_steps=5 format=3 uid="uid://cijpbbqj6k15g"]
+
+[ext_resource type="Script" uid="uid://behwmbpod5mow" path="res://bomberman/bombe/bombe.gd" id="1_muddk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mqpxn"]
 
@@ -11,14 +13,18 @@ material = SubResource("StandardMaterial3D_mqpxn")
 [node name="Bombe" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6543212, 0)
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_muddk")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("SphereShape3D_mqpxn")
+
+[node name="Timer" type="Timer" parent="StaticBody3D"]
+wait_time = 3.0
+one_shot = true
+autostart = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_muddk")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
+[connection signal="timeout" from="StaticBody3D/Timer" to="StaticBody3D" method="_on_timer_timeout"]
