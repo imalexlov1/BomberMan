@@ -28,6 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3007927, -9.472788)
 
 [node name="Sol" parent="." instance=ExtResource("2_45vn0")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
 
 [node name="Bombe" parent="." instance=ExtResource("3_qpluv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.906168, 0.4771459, 0)
