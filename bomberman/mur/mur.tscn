@@ -1,4 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://jpd4iv02dtor"]
+[gd_scene load_steps=8 format=3 uid="uid://jpd4iv02dtor"]
+
+[ext_resource type="PackedScene" uid="uid://0wuhxm366bmi" path="res://bomberman/mur/mur_pas_cassable.tscn" id="1_6wo4e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6wo4e"]
 
@@ -17,21 +19,17 @@ size = Vector3(20, 1, 0.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0d5uy"]
 size = Vector3(20, 1, 0.5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_6wo4e"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_fbilk"]
-
 [node name="Mur" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_6wo4e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -10.280847, 1, 9.753115)
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -10, 1, 10)
 mesh = SubResource("BoxMesh_u5x54")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.295327, 1, 9.686713)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 1, 10)
 shape = SubResource("BoxShape3D_u5x54")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
@@ -47,7 +45,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.015146494)
 shape = SubResource("BoxShape3D_6wo4e")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057919502, 0, 19.477186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 physics_material_override = SubResource("PhysicsMaterial_6wo4e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
@@ -60,157 +58,256 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_nxkd0")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.45568, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_6wo4e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
-transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -10.280847, 1, 9.753115)
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -10, 1, 10)
 mesh = SubResource("BoxMesh_u5x54")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.310845, 1, 9.70489)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 1, 10)
 shape = SubResource("BoxShape3D_0d5uy")
 
-[node name="StaticBody3D5" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.3941443)
+[node name="MurPasCassable" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 2)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable2" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 4)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable3" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 6)
 
-[node name="StaticBody3D6" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable4" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 8)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable5" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 10)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable6" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 12)
 
-[node name="StaticBody3D7" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.3941443)
+[node name="MurPasCassable7" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 14)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D7"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable8" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 16)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable9" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 18)
 
-[node name="StaticBody3D8" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable10" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 2)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D8"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable11" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 4)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D8"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable12" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 6)
 
-[node name="StaticBody3D9" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable13" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 8)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D9"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable14" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 10)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D9"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable15" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 12)
 
-[node name="StaticBody3D10" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable16" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 14)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D10"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable17" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 16)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D10"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable18" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 18)
 
-[node name="StaticBody3D11" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable19" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 2)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D11"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable20" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 4)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D11"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable21" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 6)
 
-[node name="StaticBody3D12" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable22" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 8)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D12"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable23" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 10)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D12"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable24" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 12)
 
-[node name="StaticBody3D13" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable25" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 14)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D13"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable26" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 16)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D13"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable27" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 18)
 
-[node name="StaticBody3D14" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable28" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 2)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D14"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable29" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 4)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D14"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable30" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 6)
 
-[node name="StaticBody3D15" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable31" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 8)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D15"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable32" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 10)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D15"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable33" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 12)
 
-[node name="StaticBody3D16" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable34" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 14)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D16"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable35" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 16)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D16"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable36" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 18)
 
-[node name="StaticBody3D17" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable37" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D17"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable38" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D17"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable39" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
 
-[node name="StaticBody3D18" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable40" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D18"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable41" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D18"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable42" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 12)
 
-[node name="StaticBody3D19" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable43" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D19"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable44" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 16)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D19"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable45" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 18)
 
-[node name="StaticBody3D20" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0902936, 1, 1.3941443)
+[node name="MurPasCassable46" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D20"]
-mesh = SubResource("BoxMesh_6wo4e")
+[node name="MurPasCassable47" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 4)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D20"]
-shape = SubResource("BoxShape3D_fbilk")
+[node name="MurPasCassable48" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 6)
+
+[node name="MurPasCassable49" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 8)
+
+[node name="MurPasCassable50" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 10)
+
+[node name="MurPasCassable51" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 12)
+
+[node name="MurPasCassable52" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 14)
+
+[node name="MurPasCassable53" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 16)
+
+[node name="MurPasCassable54" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 18)
+
+[node name="MurPasCassable55" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 2)
+
+[node name="MurPasCassable56" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 4)
+
+[node name="MurPasCassable57" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 6)
+
+[node name="MurPasCassable58" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 8)
+
+[node name="MurPasCassable59" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 10)
+
+[node name="MurPasCassable60" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 12)
+
+[node name="MurPasCassable61" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 14)
+
+[node name="MurPasCassable62" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 16)
+
+[node name="MurPasCassable63" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 18)
+
+[node name="MurPasCassable64" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 2)
+
+[node name="MurPasCassable65" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 4)
+
+[node name="MurPasCassable66" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 6)
+
+[node name="MurPasCassable67" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 8)
+
+[node name="MurPasCassable68" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 10)
+
+[node name="MurPasCassable69" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 12)
+
+[node name="MurPasCassable70" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 14)
+
+[node name="MurPasCassable71" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 16)
+
+[node name="MurPasCassable72" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 18)
+
+[node name="MurPasCassable73" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 2)
+
+[node name="MurPasCassable74" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 4)
+
+[node name="MurPasCassable75" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 6)
+
+[node name="MurPasCassable76" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 8)
+
+[node name="MurPasCassable77" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 10)
+
+[node name="MurPasCassable78" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 12)
+
+[node name="MurPasCassable79" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 14)
+
+[node name="MurPasCassable80" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 16)
+
+[node name="MurPasCassable81" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 18)
