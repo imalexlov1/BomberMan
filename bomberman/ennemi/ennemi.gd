@@ -15,15 +15,14 @@ func _physics_process(delta: float) -> void:
 func choose_new_direction():
 	# Les 4 directions possibles
 	var directions = [Vector3.FORWARD, Vector3.BACK, Vector3.LEFT, Vector3.RIGHT]
-	# On mélange et on choisi
-	directions.shuffle()
-	current_direction = directions[0]
+	# On choisi un aléatoire
+	current_direction = directions.pick_random()
 	
 func die():
 	print("Ennemi Mort ...")
-
 	# L'ennemi disparaît
 	queue_free() 
 
 func _on_hit_box_body_entered(body: Node3D) -> void:
-	print("Joueur touché !")
+	if body.has_method("take_damage"):
+		body.take_damage()

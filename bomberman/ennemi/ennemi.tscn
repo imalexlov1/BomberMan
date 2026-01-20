@@ -9,9 +9,10 @@ albedo_color = Color(1, 0, 0, 1)
 material = SubResource("StandardMaterial3D_u4xxn")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yktl1"]
+radius = 0.4
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u4xxn"]
-radius = 0.61569065
+radius = 0.4
 
 [node name="Ennemi" type="Node3D"]
 

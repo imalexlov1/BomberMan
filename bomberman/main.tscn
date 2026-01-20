@@ -22,7 +22,7 @@ ambient_light_source = 3
 environment = SubResource("Environment_1bvp3")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 7.5, 12.514151)
+transform = Transform3D(1, 0, 0, 0, 0.367232, 0.9301294, 0, -0.9301294, 0.367232, 0, 11.391029, 7.070627)
 
 [node name="Mur" parent="." instance=ExtResource("1_0vp4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3007927, -9.472788)
@@ -30,13 +30,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3007927, -9.472788)
 [node name="Sol" parent="." instance=ExtResource("2_45vn0")]
 
 [node name="Bombe" parent="." instance=ExtResource("3_qpluv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.906168, 0.4771459, 0)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.906168, -0.9944837, 0)
 
 [node name="Personnage" parent="." instance=ExtResource("4_fnspe")]
 
 [node name="Ennemi" parent="." instance=ExtResource("5_45vn0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.088581085, 0.47955978, 2.9526322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30313, 0.47955978, 4.037243)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.8660253, 0.5, 0, -0.5, -0.8660253, 0, 4.7018056, 0)

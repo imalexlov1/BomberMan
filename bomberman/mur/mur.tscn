@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://jpd4iv02dtor"]
+[gd_scene load_steps=8 format=3 uid="uid://jpd4iv02dtor"]
+
+[ext_resource type="PackedScene" uid="uid://0wuhxm366bmi" path="res://bomberman/mur/mur_pas_cassable.tscn" id="1_6wo4e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6wo4e"]
 
@@ -23,46 +25,289 @@ size = Vector3(20, 1, 0.5)
 physics_material_override = SubResource("PhysicsMaterial_6wo4e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(0.0027750258, 0, 0.9999961, 0, 1, 0, -0.9999961, 0, 0.0027750258, -10.280847, 0.6372824, 9.753115)
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -10, 1, 10)
 mesh = SubResource("BoxMesh_u5x54")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.295327, 0.631312, 9.686713)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 1, 10)
 shape = SubResource("BoxShape3D_u5x54")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_6wo4e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6391175, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("BoxMesh_u5x54")
 skeleton = NodePath("../../StaticBody3D2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6469319, -0.015146494)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.015146494)
 shape = SubResource("BoxShape3D_6wo4e")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057919502, 0, 19.477186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 physics_material_override = SubResource("PhysicsMaterial_6wo4e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6391175, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("BoxMesh_u5x54")
 skeleton = NodePath("../../StaticBody3D3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6477852, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_nxkd0")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.45568, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_6wo4e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
-transform = Transform3D(0.0027750258, 0, 0.9999961, 0, 1, 0, -0.9999961, 0, 0.0027750258, -10.280847, 0.6372824, 9.753115)
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -10, 1, 10)
 mesh = SubResource("BoxMesh_u5x54")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.310845, 0.6443019, 9.70489)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 1, 10)
 shape = SubResource("BoxShape3D_0d5uy")
+
+[node name="MurPasCassable" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 2)
+
+[node name="MurPasCassable2" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 4)
+
+[node name="MurPasCassable3" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 6)
+
+[node name="MurPasCassable4" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 8)
+
+[node name="MurPasCassable5" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 10)
+
+[node name="MurPasCassable6" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 12)
+
+[node name="MurPasCassable7" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 14)
+
+[node name="MurPasCassable8" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 16)
+
+[node name="MurPasCassable9" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 18)
+
+[node name="MurPasCassable10" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 2)
+
+[node name="MurPasCassable11" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 4)
+
+[node name="MurPasCassable12" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 6)
+
+[node name="MurPasCassable13" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 8)
+
+[node name="MurPasCassable14" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 10)
+
+[node name="MurPasCassable15" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 12)
+
+[node name="MurPasCassable16" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 14)
+
+[node name="MurPasCassable17" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 16)
+
+[node name="MurPasCassable18" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 18)
+
+[node name="MurPasCassable19" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 2)
+
+[node name="MurPasCassable20" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 4)
+
+[node name="MurPasCassable21" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 6)
+
+[node name="MurPasCassable22" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 8)
+
+[node name="MurPasCassable23" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 10)
+
+[node name="MurPasCassable24" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 12)
+
+[node name="MurPasCassable25" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 14)
+
+[node name="MurPasCassable26" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 16)
+
+[node name="MurPasCassable27" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 18)
+
+[node name="MurPasCassable28" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 2)
+
+[node name="MurPasCassable29" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 4)
+
+[node name="MurPasCassable30" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 6)
+
+[node name="MurPasCassable31" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 8)
+
+[node name="MurPasCassable32" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 10)
+
+[node name="MurPasCassable33" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 12)
+
+[node name="MurPasCassable34" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 14)
+
+[node name="MurPasCassable35" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 16)
+
+[node name="MurPasCassable36" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 18)
+
+[node name="MurPasCassable37" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="MurPasCassable38" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
+
+[node name="MurPasCassable39" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
+
+[node name="MurPasCassable40" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8)
+
+[node name="MurPasCassable41" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10)
+
+[node name="MurPasCassable42" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 12)
+
+[node name="MurPasCassable43" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14)
+
+[node name="MurPasCassable44" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 16)
+
+[node name="MurPasCassable45" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 18)
+
+[node name="MurPasCassable46" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2)
+
+[node name="MurPasCassable47" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 4)
+
+[node name="MurPasCassable48" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 6)
+
+[node name="MurPasCassable49" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 8)
+
+[node name="MurPasCassable50" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 10)
+
+[node name="MurPasCassable51" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 12)
+
+[node name="MurPasCassable52" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 14)
+
+[node name="MurPasCassable53" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 16)
+
+[node name="MurPasCassable54" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 18)
+
+[node name="MurPasCassable55" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 2)
+
+[node name="MurPasCassable56" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 4)
+
+[node name="MurPasCassable57" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 6)
+
+[node name="MurPasCassable58" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 8)
+
+[node name="MurPasCassable59" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 10)
+
+[node name="MurPasCassable60" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 12)
+
+[node name="MurPasCassable61" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 14)
+
+[node name="MurPasCassable62" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 16)
+
+[node name="MurPasCassable63" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 18)
+
+[node name="MurPasCassable64" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 2)
+
+[node name="MurPasCassable65" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 4)
+
+[node name="MurPasCassable66" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 6)
+
+[node name="MurPasCassable67" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 8)
+
+[node name="MurPasCassable68" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 10)
+
+[node name="MurPasCassable69" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 12)
+
+[node name="MurPasCassable70" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 14)
+
+[node name="MurPasCassable71" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 16)
+
+[node name="MurPasCassable72" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 18)
+
+[node name="MurPasCassable73" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 2)
+
+[node name="MurPasCassable74" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 4)
+
+[node name="MurPasCassable75" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 6)
+
+[node name="MurPasCassable76" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 8)
+
+[node name="MurPasCassable77" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 10)
+
+[node name="MurPasCassable78" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 12)
+
+[node name="MurPasCassable79" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 14)
+
+[node name="MurPasCassable80" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 16)
+
+[node name="MurPasCassable81" parent="." instance=ExtResource("1_6wo4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 18)
