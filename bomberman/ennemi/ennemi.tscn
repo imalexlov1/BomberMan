@@ -14,20 +14,18 @@ radius = 0.4
 [sub_resource type="SphereShape3D" id="SphereShape3D_u4xxn"]
 radius = 0.4
 
-[node name="Ennemi" type="Node3D"]
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_y2f3k")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_y2f3k")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_yktl1")
 
-[node name="HitBox" type="Area3D" parent="CharacterBody3D"]
+[node name="HitBox" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/HitBox"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
 shape = SubResource("SphereShape3D_u4xxn")
 
-[connection signal="body_entered" from="CharacterBody3D/HitBox" to="CharacterBody3D" method="_on_hit_box_body_entered"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
