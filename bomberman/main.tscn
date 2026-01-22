@@ -30,9 +30,10 @@ transform = Transform3D(1, 0, 0, 0, 0.367232, 0.9301294, 0, -0.9301294, 0.367232
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3007927, -9.472788)
 
 [node name="Sol" parent="." instance=ExtResource("2_45vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.72963524)
 
 [node name="Bombe" parent="." instance=ExtResource("3_qpluv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.906, 0.6160375, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.906, -3.8046112, 0)
 
 [node name="Personnage" parent="." instance=ExtResource("4_fnspe")]
 
