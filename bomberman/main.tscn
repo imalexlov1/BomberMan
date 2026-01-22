@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dk7gmuy0gc7kb"]
+[gd_scene load_steps=12 format=3 uid="uid://dk7gmuy0gc7kb"]
 
 [ext_resource type="PackedScene" uid="uid://jpd4iv02dtor" path="res://bomberman/mur/mur.tscn" id="1_0vp4s"]
 [ext_resource type="PackedScene" uid="uid://2ik3lyhlk1yu" path="res://bomberman/sol/sol.tscn" id="2_45vn0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bf4gmj6713n73" path="res://bomberman/ennemi/ennemi.tscn" id="5_45vn0"]
 [ext_resource type="PackedScene" uid="uid://4ob4o8ad65xf" path="res://bomberman/lives/lives.tscn" id="6_qpluv"]
 [ext_resource type="Script" uid="uid://5ba3muog2m2c" path="res://bomberman/lives/lives.gd" id="7_fnspe"]
+[ext_resource type="PackedScene" uid="uid://eqqcaopgoahi" path="res://bomberman/game_over/game_over.tscn" id="8_rnqnb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 
@@ -35,13 +36,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.72963524)
 [node name="Bombe" parent="." instance=ExtResource("3_qpluv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.906, -3.8046112, 0)
 
-[node name="Personnage" parent="." instance=ExtResource("4_fnspe")]
+[node name="Personnage" parent="." node_paths=PackedStringArray("game_over_screen") instance=ExtResource("4_fnspe")]
+game_over_screen = NodePath("../GameOver")
 
 [node name="Ennemi" parent="." instance=ExtResource("5_45vn0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30313, 0.47955978, 4.037243)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30313, 0.47955978, 3.5547743)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.8660253, 0.5, 0, -0.5, -0.8660253, 0, 4.7018056, 0)
 
 [node name="Lives" parent="." instance=ExtResource("6_qpluv")]
 script = ExtResource("7_fnspe")
+
+[node name="GameOver" parent="." instance=ExtResource("8_rnqnb")]

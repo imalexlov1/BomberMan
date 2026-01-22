@@ -14,6 +14,8 @@ var current_lives = init_live
 var start_position : Vector3
 signal update_lives(new_value)
 
+@export var game_over_screen : CanvasLayer
+
 func _ready ():
 	# On mémorise la position au lancement du jeu pour le respawn
 	start_position = global_position
@@ -66,4 +68,10 @@ func respawn():
 
 func game_over():
 	print("Game over")
+	
+	if game_over_screen:
+		game_over_screen.visible = true
+		
+	# On STOP TOUT
+	get_tree().paused = true
 	
