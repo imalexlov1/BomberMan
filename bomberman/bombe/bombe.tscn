@@ -14,6 +14,21 @@ material = SubResource("StandardMaterial3D_mqpxn")
 resource_local_to_scene = true
 albedo_color = Color(1, 0.40624234, 0.27032813, 1)
 
+[sub_resource type="Animation" id="Animation_q6xhs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/MeshInstance3D:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.40624234, 0.27032813, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_xvbhw"]
 resource_name = "blink"
 loop_mode = 1
@@ -30,21 +45,6 @@ tracks/0/keys = {
 "values": [Color(1, 0.40624234, 0.27032813, 1), Color(0, 0, 0, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_q6xhs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody3D/MeshInstance3D:surface_material_override/0:albedo_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 0.40624234, 0.27032813, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_10nig"]
 _data = {
 &"RESET": SubResource("Animation_q6xhs"),
@@ -55,7 +55,6 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6543212, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-visible = false
 script = ExtResource("1_muddk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
